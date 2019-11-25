@@ -1,0 +1,24 @@
+:host {
+    display: block;
+    padding: 1rem .5rem;
+    overflow: auto;
+}
+
+#searchList {
+    padding-left: 0;
+    list-style: none;
+    overflow: auto;
+}
+
+#searchbox {
+    width: 100%;
+    display: block;
+    line-height: 150%;
+    font-size: 1rem;
+    box-sizing: border-box;
+    padding: .3rem;
+}
+
+.highlight {
+    background-color: var(--highlight-color);
+}

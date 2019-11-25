@@ -1,0 +1,6 @@
+:root {
+    --highlight-color: yellow;
+}
+:host, html, body {
+    font-family: Poppins,Helvetica,sans-serif;
+}

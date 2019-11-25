@@ -1,0 +1,14 @@
+
+<div style="max-width: 60ch;margin:auto">
+    <div style="border: 1px solid black;">
+        <mua-search-with-select
+            label="Conference"
+            items.bind="items"
+        ></mua-search-with-select>
+    </div>
+</div>
+
+<hr>
+
+<input type="text" value.bind="itemToAdd"/>
+<button click.trigger="addNewItem(itemToAdd)">click to add</button>

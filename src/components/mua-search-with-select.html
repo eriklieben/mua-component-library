@@ -1,0 +1,32 @@
+
+<label>
+    ${label}: 
+    <input 
+        id="searchbox" 
+        type="text"
+        autofocus
+        value.bind="searchText & debounce:200" />
+</label>
+<ul id="searchList">
+    <li repeat.for="item of items | search:searchText" 
+        if.bind="searchText.length > 0 && item.highLightText != undefined || searchText.length == 0">
+        <label>
+            <input name="searchItems" type="radio" model.bind="item" />
+            <span if.bind="item.highLightText != undefined" innerhtml.bind="item.highLightText"></span>
+            <span else>${item.text}</span>
+        </label>
+    </li>
+</ul>
+<p>length of items ${items.length}</p>
+
+<p>same list without li if.binding</p>
+<ul id="searchList2">
+    <li repeat.for="item of items | search:searchText">
+        <label>
+            <input name="searchItems" type="radio" model.bind="item" />
+            <span if.bind="item.highLightText != undefined" innerhtml.bind="item.highLightText"></span>
+            <span else>${item.text}</span>
+            <span style="color:red">${item.highLightText}</span>
+        </label>
+    </li>
+</ul>
